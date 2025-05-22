@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Carta Virtual</title>
+  <style>
+    :root {
+      font-size: 16px;
+    }
+    /* Base reset e centralização */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    #envelope {
+      width: 60vw;
+      max-width: 250px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    #envelope:hover {
+      transform: scale(1.05);
+    }
+    #hint {
+      margin-top: 10px;
+      color: #555;
+      font-size: 0.9rem;
+      text-align: center;
+      max-width: 80vw;
+    }
+    #message {
+      display: none;
+      width: 90vw;
+      max-width: 350px;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: left;
+      line-height: 1.6;
+      margin-top: 20px;
+      font-size: 1rem;
+    }
+    #message p {
+      margin-bottom: 1rem;
+    }
+    /* Ajustes para telas muito pequenas */
+    @media (max-width: 320px) {
+      :root { font-size: 14px; }
+      h1 { font-size: 1.3rem; }
+      #envelope { width: 70vw; }
+      #message { font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Abra se tiver coragem</h1>
+  <img id="envelope" src="https://i.pinimg.com/736x/55/0b/81/550b8166975211644c935325c9c48d8a.jpg" alt="Envelope" />
+  <p id="hint">Ao clicar nesse envelope, você vai estar exposto aos meus sentimentos e pensamentos mais sinceros.</p>
+
+  <div id="message">
+    <p>Meu amor, eu não sei que escolha vai fazer, e vou respeitar tua decisão.</p>
+    <p>Eu só quero que saiba disso...</p>
+    <p>Se escolher ficar comigo, vai ter do teu lado uma companheira pra vida, mais do que alguém com quem ter momentos românticos, uma amiga de verdade, alguém com quem conversar até mesmo sobre assuntos que acha que ninguém vai querer ouvir.</p>
+    <p>Eu entendo que estamos em fases diferentes da vida, e temos visões de mundo diferente, mas também sei que podemos aprender juntos, crescer juntos.</p>
+    <p>Se eu pareci distante em algum momento, se tu sentiu que eu não estava interessada de verdade, era apenas medo. Me apaixonei com uma velocidade e intensidade que me assustou, e tentei manter um certo equilíbrio, tento não deixar transparecer, tenho medo que meu afeto e minha intensidade te afastem. Mas não consigo conter tudo isso dentro de mim, e por isso acabo deixando escapar.</p>
+    <p>Eu te quero por inteiro. E eu quero ser tua por inteiro. O que tenho a oferecer é verdadeiro. Não quero te machucar, quero ser pra ti o que tu me traz: paz, segurança, carinho, amor. Quero ser um porto seguro.</p>
+    <p>Se encontrar no teu coração um espaço pra mim, me deixe ficar, e eu cuidarei bem desse lar.</p>
+  </div>
+
+  <script>
+    const envelope = document.getElementById('envelope');
+    const hint = document.getElementById('hint');
+    const message = document.getElementById('message');
+
+    envelope.addEventListener('click', () => {
+      envelope.style.display = 'none';
+      hint.style.display = 'none';
+      message.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
